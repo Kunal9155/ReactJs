@@ -94,7 +94,7 @@ checkIsWinner();
   return (
 <React.Fragment>
   <div>
-    <h1 className="text-white mt-3 text-center fw-bold ">
+    <h1 className="text-white mt-3 text-center fw-bold  intro">
       Let's Play Tic-Tac-Toe Game ! By KunaL :)</h1>
   </div>
 <Container className ="p-5">
@@ -102,8 +102,8 @@ checkIsWinner();
  <Row>
    <Col md={6} className="offset-md-3">
      {winMessage ? (
-       <div className="mb-3 mt-2 wins">
-         <h1 className="text-center text-warning text-uppercase">{winMessage}
+       <div className="mb-3 mt-2 ">
+         <h1 className="text-center wins text-warning text-uppercase">{winMessage}
          </h1>
          <Button className="w-100 btn"   onClick = {reloadGame}>Start a New Game</Button>
        </div>
