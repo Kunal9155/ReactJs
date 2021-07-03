@@ -7,13 +7,16 @@ body {
 }
 
 .grid {
-  /* border: 2px dashed #FB9300; */
-  padding: 30px;
+
+  padding-left : 13px;
+  padding-right : 13px;
+  padding-top: 25px;
+  padding-bottom : 25px;
   display: grid;
+
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 12px;
+  grid-gap: 10px;
   border-radius: 27px;
-  /* background-image: radial-gradient(circle, #ff747d, #ff7f68, #ff9050, #ffa436, #ffbb12); */
   background-color: #020000;
     background-image: 
         radial-gradient(at 47% 33%, hsl(0.00, 100%, 50%) 0, transparent 59%), 
@@ -39,19 +42,24 @@ body {
 
 .turn{
   /* color: #FB9300 !important; */
-  font-size: 45px;
+  font-size: 55px;
  color: cornsilk;
  font-weight: bolder;
 }
 .card{
-  /* background-color: red;
-  border:1px dashed black;
-   */
-   backdrop-filter: blur(25px);
-   -webkit-backdrop-filter: blur(25px);
-   background-color: rgba(255, 255, 255, 0.34);
-   border-radius: 25px;
-   border: 1px solid rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background-color: rgba(255, 255, 255, 0.34);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  cursor: pointer;
+}
+.card:hover{
+  background-image: radial-gradient(circle, #f39797, #f68988, #f97a79, #fa6b6a, #fb5a5a);
+}
+
+.card:active{
+  background-image: radial-gradient(circle, #f3fbac, #f5fc90, #f7fd71, #fbfd4c, #fffd00);
 }
 
 .wins{
@@ -62,6 +70,7 @@ background: linear-gradient(to right, #FF0000 18%, #FFFF00 65%, #05C1FF 100%, #F
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 font-weight: bolder;
+font-size: 55px;
 
 }
 

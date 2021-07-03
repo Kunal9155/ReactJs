@@ -1,4 +1,8 @@
 import React , {useState}from "react";
+import { useEffect } from 'react'
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 
 import Icon from "./components/Icon"
 
@@ -20,6 +24,13 @@ const itemArray = new Array(9).fill("empty")
 
 
 const App=() => {
+
+  useEffect(() => {
+    Aos.init({duration:2000});
+  }, [])
+  // useEffect(() =>{
+  //    Aos.init({duration:2000});
+  // } ,[]);
 
 const [isCross , setIsCross] = useState(false)
 
@@ -94,7 +105,7 @@ checkIsWinner();
   return (
 <React.Fragment>
   <div>
-    <h1 className="text-white mt-3 text-center fw-bold  intro">
+    <h1 data-aos="fade-down" className="text-white mt-3 text-center fw-bold  intro">
       Let's Play Tic-Tac-Toe Game ! By KunaL :)</h1>
   </div>
 <Container className ="p-5">
@@ -108,13 +119,13 @@ checkIsWinner();
          <Button className="w-100 btn"   onClick = {reloadGame}>Start a New Game</Button>
        </div>
      ): (
-       <h1 className = "text-center  turn">
+       <h1 data-aos="fade-down"  className = "text-center  turn">
       {isCross ? "Cross" : "Circle"} turns  
        </h1>
      )}
-     <div className="grid">
+     <div data-aos="fade-up"  className="grid">
     {itemArray.map((item,index) => (
-      <Card className="card"
+      <Card data-aos="flip-up" className="card"
         onClick = {() => {changeItem(index)}}>
         <CardBody className="box">
                  <Icon name={item}/>
