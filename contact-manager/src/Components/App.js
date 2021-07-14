@@ -3,13 +3,26 @@ import Header from "./Header"
 import AddContact from "./AddContact"
 import ContactList from "./ContactList"
 
+const contacts = [
+    {
+        id:"1",
+        name: "kunal",
+        email: "kunal@gmail.com"
+    },
+    {
+        id:"1",
+        name: "khushi",
+        email: "khushi@gmail.com"
+    }
+
+];
 const App =() =>{
     return(
-        <React.Fragment>
+     <div>
             <Header/>
             <AddContact/>
-            <ContactList/>
-        </React.Fragment>
+            <ContactList contacts={contacts}/>
+     </div>
     );
 }
 
