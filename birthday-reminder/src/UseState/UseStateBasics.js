@@ -16,14 +16,14 @@ const ChangeTitle =() =>{
     setTitle('four')
   }  
   else{
-    setTitle('five')
+    setTitle('five') 
   } 
   ;
 };
   return(
     <center>
     <h1>{title}</h1>
-    <button onClick= {ChangeTitle} >Change the title</button>
+    <button  style = {{color:'red',fontSize:'4em',fontWeight:'bold'}} onClick= {ChangeTitle} >Change the  title</button>
     </center>
   );
 }
